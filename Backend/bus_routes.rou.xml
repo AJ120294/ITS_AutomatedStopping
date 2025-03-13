@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<routes>
+  <vType id="bus" accel="1.0" decel="1.0" length="12" maxSpeed="20">
+    <route id="route_70" edges="6231-190b2aaa 6294-9919bdf3 6296-473fe125 6137-efe1e5a5 6139-f2088f38 6141-eb56f749 6135-e06c5bc7 6133-76d6b3e0 6131-5efac242 6129-28bbc03d 6127-61b89047 6125-cf3235f8 1760-317dbc99 7523-7abc98c6 7521-14bbf05f 7519-4859f3cb 7517-d5034761 7515-b4111e45 7513-e09ddd20 7511-c8760fea 7509-6b201da2 7505-04bee04b 7503-832c53ad 7501-d6dd7a1b 7615-0b0212c3 7613-befee71d 7611-b02f5fd0 7607-e365ff93 7605-01c4b26f 8480-db304e65 7601-17be9b9f 7207-bfc319e4 7205-e1b07628 7203-52127399 7201-b3efdf9d 7177-4660a5ff 7231-d0b82ab5 7227-3ccd581c 7149-6d6d1e99 7147-4e9003b4 7145-caabaedd 7141-d8af5868 7020-65f1fc06">
+      <vehicle id="bus_70" type="bus" route="route_70" depart="0">
+        <stop busStop="Woolworths Botany" duration="10">
+          <stop busStop="The Hub" duration="10"/>
+        </stop>
+      </vehicle>
+    </route>
+  </vType>
+</routes>

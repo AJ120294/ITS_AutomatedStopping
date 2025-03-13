@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Button from "../components/Button";
 import "./SearchBus.css"; // Importing styles
-import { fetchStopsForBus } from "./api"; // API function
+import { fetchStopsForBus, generateSUMOFiles } from "./api";  // ✅ Single Import
 
 function SearchBus() {
   const [busNumber, setBusNumber] = useState(""); // Selected bus number
@@ -46,7 +46,7 @@ function SearchBus() {
   };
 
   // Handle Confirm Journey
-  const handleConfirm = () => {
+  const handleConfirm = async () => {
     if (!busNumber) {
       alert("Please select a bus number.");
       return;
@@ -63,10 +63,25 @@ function SearchBus() {
       alert("Start and destination cannot be the same.");
       return;
     }
-    
-    navigate("/journey-confirmation", {
-      state: { busNumber, startStation, destination },
-    });
+
+    try {
+      // Call backend API to generate SUMO files
+      const result = await generateSUMOFiles(busNumber, startStation, destination);
+      
+      if (result.error) {
+        alert(`Error: ${result.error}`);
+      } else {
+        alert(result.message);  // Show success message
+
+        // ✅ FIX: Move navigation inside the function after API call
+        navigate("/journey-confirmation", {
+          state: { busNumber, startStation, destination },
+        });
+      }
+    } catch (error) {
+      console.error("Error generating SUMO files:", error);
+      alert("Failed to generate SUMO files.");
+    }
   };
 
   return (
