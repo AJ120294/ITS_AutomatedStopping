@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 중앙 정렬 */
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .station-list {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+  }
+  
+  .station-item {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .station-item:hover {
+    background-color: #ddd;
+  }
+  
