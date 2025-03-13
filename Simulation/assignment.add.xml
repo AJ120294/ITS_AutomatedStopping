@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-03-13 15:48:25 by Eclipse SUMO netedit Version 1.22.0
+<!-- generated on 2025-03-14 12:57:18 by Eclipse SUMO netedit Version 1.22.0
 -->
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
     <!-- StoppingPlaces -->
-    <busStop id="1546-33fd8055" name="Lynnmall - The Brickworks" lane="-E14_0" startPos="35.12" endPos="45.12"/>
     <busStop id="1760-317dbc99" name="Stop A Panmure Station" lane="E9_0" startPos="159.78" endPos="169.78"/>
     <busStop id="1869-5e6c53e2" name="St Jude Street" lane="-E11_0" startPos="179.83" endPos="189.83"/>
-    <busStop id="5779-c6aeef3f" name="Portage Road" lane="-E13_0" startPos="62.78" endPos="72.78"/>
-    <busStop id="5914-233d0cdc" name="Stop E New Lynn" lane="-E15_0" startPos="118.83" endPos="128.83"/>
+    <busStop id="5779-c6aeef3f" name="Portage Road" lane="5779-c6aeef3f_0" startPos="62.78" endPos="72.78"/>
     <busStop id="6125-cf3235f8" name="Williams Avenue" lane="E1_0" startPos="165.92" endPos="175.92"/>
     <busStop id="6127-61b89047" name="Palm Avenue/Pakuranga Plaza" lane="E0_0" startPos="82.74" endPos="92.74"/>
     <busStop id="6129-28bbc03d" name="Ti Rakau Park" lane="-E2_0" startPos="409.84" endPos="419.84"/>
@@ -24,7 +22,7 @@
     <busStop id="6296-473fe125" name="The Hub" lane="-E7_0" startPos="74.76" endPos="84.76"/>
     <busStop id="7513-e09ddd20" name="Ballarat Street" lane="E15_0" startPos="118.84" endPos="128.84"/>
     <busStop id="7515-b4111e45" name="Harrison Road" lane="E14_0" startPos="195.74" endPos="205.74"/>
-    <busStop id="7517-d5034761" name="Ellerslie Panmure Highway/Harris Road" lane="E13_0" startPos="326.68" endPos="336.68"/>
+    <busStop id="7517-d5034761" name="Ellerslie Panmure Highway/Harris Road" lane="7517-d5034761_0" startPos="326.68" endPos="336.68"/>
     <busStop id="7519-4859f3cb" name="Ellerslie Panmure Highway/Burt Road" lane="E12_0" startPos="116.70" endPos="126.70"/>
     <busStop id="7521-14bbf05f" name="Barrack Road" lane="E11_0" startPos="261.23" endPos="271.23"/>
     <busStop id="7523-7abc98c6" name="Mountain Road" lane="E10_0" startPos="178.34" endPos="188.34"/>
