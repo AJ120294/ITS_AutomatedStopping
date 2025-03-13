@@ -32,7 +32,13 @@ function SearchBus() {
       const stops = await fetchStopsForBus(selectedBus); // API call
 
       if (stops.length > 0) {
-        const stopNames = stops.map((stop) => stop.attributes?.stop_name || "Unknown Stop");
+        //console.log("Total stops received:", stops.length);
+        
+        const stopNames = stops
+          .slice(0, 19) // Take only the first 19 stops
+          .map((stop) => stop.attributes?.stop_name || "Unknown Stop");
+      
+        //console.log("Stops saved (max 19):", stopNames);
         setStations(stopNames);
       } else {
         setStations(["No stops found"]);
