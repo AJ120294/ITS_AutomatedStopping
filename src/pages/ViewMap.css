@@ -1,9 +1,12 @@
+/* 전체 컨테이너 스타일 */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #F9F9F9, #E3E3E3);
   text-align: center;
 }
 
@@ -12,4 +15,42 @@
   height: 60vh;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 정보 박스 스타일 */
+.info-box {
+  background: linear-gradient(135deg, #200ea3, #66144e); /* 🔥 블루-시안 그라디언트 배경 */
+  color: white; /* 글씨 색상 */
+  padding: 20px;
+  border-radius: 15px; /* 둥근 모서리 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  margin: 15px 0;
+  transition: transform 0.3s ease-in-out; /* 부드러운 효과 */
+}
+
+.info-box:hover {
+  transform: scale(1.05); /* 🔥 마우스를 올리면 살짝 확대되는 효과 */
+}
+
+
+.info-box p {
+  font-size: 18px;
+  margin: 8px 0;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* 글자 그림자 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+  .info-box {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .info-box p {
+    font-size: 16px;
+  }
 }

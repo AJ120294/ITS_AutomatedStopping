@@ -64,7 +64,7 @@ function SearchBus() {
       return;
     }
     
-    navigate("/journey-confirmation", {
+    navigate("/map", {
       state: { busNumber, startStation, destination },
     });
   };
@@ -105,17 +105,19 @@ function SearchBus() {
         </div>
       )}
 
-      {/* Destination Dropdown */}
-      {stations.length > 0 && !loading && (
+      {/* Destination Dropdown (appear once startStation selected) */}
+      {startStation && startStation !== "No stops found" && startStation !== "Error fetching data" && (
         <div className="dropdown-container">
           <label>Destination:</label>
           <select value={destination} onChange={(e) => setDestination(e.target.value)} className="dropdown">
             <option value="">Select Your Destination</option>
-            {stations.map((station, index) => (
-              <option key={index} value={station}>
-                {station}
-              </option>
-            ))}
+            {stations
+              .filter((station) => station !== startStation) // except start stop 
+              .map((station, index) => (
+                <option key={index} value={station}>
+                  {station}
+                </option>
+              ))}
           </select>
         </div>
       )}

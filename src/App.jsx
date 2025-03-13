@@ -11,8 +11,6 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<SearchBus />} />
-          <Route path="/start" element={<SelectStart />} />
-          <Route path="/destination" element={<SelectDestination />} />
           <Route path="/map" element={<ViewMap />} />
         </Routes>
       </Router>
