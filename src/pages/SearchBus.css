@@ -5,15 +5,36 @@
     justify-content: center; /* 세로 중앙 정렬 */
     width: 100vw;  /* 화면 전체 너비 */
     height: 100vh;  /* 화면 전체 높이 */
+    padding: 20px;
+    background: linear-gradient(135deg, #F9F9F9, #E3E3E3);
     text-align: center;
   }
   
   h2 {
-    font-size: 20px;
+    font-size: 28px;
     margin-bottom: 20px;
     color: #333;
+    font-weight: bold;
   }
   
+  /* 드롭다운 컨테이너 */
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+/* 레이블 스타일 (드롭다운 위에 위치) */
+.dropdown-container label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
   .input-field {
     width: 80%;
     max-width: 300px; /* 입력창 최대 너비 제한 */
@@ -39,14 +60,15 @@
   }
   
   .dropdown {
-    width: 80%;  /* Increase width */
+    width: 100%;  /* Increase width */
     max-width: 300px; /* Limit max width */
     padding: 12px;
     margin: 10px 0;
     border: 2px solid #ccc; /* Slightly thicker border */
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 16px; /* Larger font size */
     background-color: #fff;
     text-align: center;
     cursor: pointer; /* Show pointer cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
