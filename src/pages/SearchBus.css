@@ -38,3 +38,15 @@
     border-radius: 5px;
   }
   
+  .dropdown {
+    width: 80%;  /* Increase width */
+    max-width: 300px; /* Limit max width */
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ccc; /* Slightly thicker border */
+    border-radius: 6px;
+    font-size: 16px; /* Larger font size */
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer; /* Show pointer cursor on hover */
+}
