@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-03-14 12:57:18 by Eclipse SUMO netedit Version 1.22.0
+<!-- generated on 2025-03-14 13:11:32 by Eclipse SUMO netedit Version 1.22.0
 -->
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
     <!-- StoppingPlaces -->
+    <busStop id="1546-33fd8055" name="Lynnmall - The Brickworks" lane="1546-33fd8055_0" startPos="152.60" endPos="162.60"/>
     <busStop id="1760-317dbc99" name="Stop A Panmure Station" lane="E9_0" startPos="159.78" endPos="169.78"/>
     <busStop id="1869-5e6c53e2" name="St Jude Street" lane="-E11_0" startPos="179.83" endPos="189.83"/>
     <busStop id="5779-c6aeef3f" name="Portage Road" lane="5779-c6aeef3f_0" startPos="62.78" endPos="72.78"/>
+    <busStop id="5914-233d0cdc" name="Stop E New Lynn" lane="5914-233d0cdc_0" startPos="160.98" endPos="170.98"/>
     <busStop id="6125-cf3235f8" name="Williams Avenue" lane="E1_0" startPos="165.92" endPos="175.92"/>
     <busStop id="6127-61b89047" name="Palm Avenue/Pakuranga Plaza" lane="E0_0" startPos="82.74" endPos="92.74"/>
     <busStop id="6129-28bbc03d" name="Ti Rakau Park" lane="-E2_0" startPos="409.84" endPos="419.84"/>

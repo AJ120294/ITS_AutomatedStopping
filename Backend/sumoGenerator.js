@@ -3,7 +3,7 @@ const xmlbuilder = require("xmlbuilder");
 
 function generateSUMOFiles(busNumber, startStation, destination, stops) {
   const networkFile = "network.net.xml";
-  const routeFile = "bus_routes.rou.xml";
+  const routeFile = "assignment.rou.xml";
 
   console.log(`🚀 Generating SUMO file with Stop IDs: ${routeFile}`);
 
