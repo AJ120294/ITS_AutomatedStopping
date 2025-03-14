@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-03-14 13:11:32 by Eclipse SUMO netedit Version 1.22.0
+<!-- generated on 2025-03-14 14:35:52 by Eclipse SUMO netedit Version 1.22.0
 -->
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
     <!-- StoppingPlaces -->
     <busStop id="1546-33fd8055" name="Lynnmall - The Brickworks" lane="1546-33fd8055_0" startPos="152.60" endPos="162.60"/>
     <busStop id="1760-317dbc99" name="Stop A Panmure Station" lane="E9_0" startPos="159.78" endPos="169.78"/>
-    <busStop id="1869-5e6c53e2" name="St Jude Street" lane="-E11_0" startPos="179.83" endPos="189.83"/>
+    <busStop id="1869-5e6c53e2" name="St Jude Street" lane="1869-5e6c53e2_0" startPos="179.83" endPos="189.83"/>
     <busStop id="5779-c6aeef3f" name="Portage Road" lane="5779-c6aeef3f_0" startPos="62.78" endPos="72.78"/>
     <busStop id="5914-233d0cdc" name="Stop E New Lynn" lane="5914-233d0cdc_0" startPos="160.98" endPos="170.98"/>
     <busStop id="6125-cf3235f8" name="Williams Avenue" lane="E1_0" startPos="165.92" endPos="175.92"/>
@@ -22,25 +22,40 @@
     <busStop id="6231-190b2aaa" name="Stop A Botany Town Centre" lane="-E8_0" startPos="41.92" endPos="51.92"/>
     <busStop id="6294-9919bdf3" name="Woolworths Botany" lane="-E8_0" startPos="196.66" endPos="206.66"/>
     <busStop id="6296-473fe125" name="The Hub" lane="-E7_0" startPos="74.76" endPos="84.76"/>
+    <busStop id="7049-24767414" name="Vulcan Lane" lane="7049-24767414_0" startPos="29.24" endPos="39.24"/>
+    <busStop id="7053-154c6c71" name="Wellesley Street" lane="7053-154c6c71_0" startPos="75.07" endPos="85.07"/>
+    <busStop id="7059-607e2a63" name="Auckland Town Hall" lane="7059-607e2a63_0" startPos="43.52" endPos="53.52"/>
+    <busStop id="7065-5235e1c6" name="Scotia Place" lane="7065-5235e1c6_0" startPos="70.76" endPos="80.76"/>
+    <busStop id="7133-173774ea" name="Pitt Street" lane="7133-173774ea_0" startPos="81.65" endPos="91.65"/>
+    <busStop id="7135-b1ba3584" name="Rainbow Bridge/Karangahape Road" lane="7135-b1ba3584_0" startPos="66.15" endPos="76.15"/>
     <busStop id="7513-e09ddd20" name="Ballarat Street" lane="E15_0" startPos="118.84" endPos="128.84"/>
     <busStop id="7515-b4111e45" name="Harrison Road" lane="E14_0" startPos="195.74" endPos="205.74"/>
     <busStop id="7517-d5034761" name="Ellerslie Panmure Highway/Harris Road" lane="7517-d5034761_0" startPos="326.68" endPos="336.68"/>
     <busStop id="7519-4859f3cb" name="Ellerslie Panmure Highway/Burt Road" lane="E12_0" startPos="116.70" endPos="126.70"/>
     <busStop id="7521-14bbf05f" name="Barrack Road" lane="E11_0" startPos="261.23" endPos="271.23"/>
     <busStop id="7523-7abc98c6" name="Mountain Road" lane="E10_0" startPos="178.34" endPos="188.34"/>
-    <busStop id="8121-2a2cd206" name="Great North Road/MOTAT" lane="E34_0" startPos="2.57" endPos="12.57"/>
-    <busStop id="8123-af1d2f39" name="Western Springs Park" lane="E33_0" startPos="22.83" endPos="32.83"/>
-    <busStop id="8125-0b23e96e" name="Auckland Zoo" lane="E32_0" startPos="31.25" endPos="41.25"/>
-    <busStop id="8127-33d8995c" name="Pasadena Shops" lane="E31_0" startPos="5.71" endPos="15.71"/>
-    <busStop id="8129-39943bed" name="Walmer Road" lane="E30_0" startPos="12.52" endPos="22.52"/>
-    <busStop id="8131-3cc7ec8a" name="Great North Road/Pt Chevalier Shops" lane="E29_0" startPos="12.64" endPos="22.64"/>
-    <busStop id="8133-4629fc99" name="Herdman Street" lane="E28_0" startPos="10.47" endPos="20.47"/>
-    <busStop id="8137-924f9275" name="Alford Street" lane="E27_0" startPos="79.52" endPos="89.52"/>
-    <busStop id="8139-2a085b0f" name="Waterview Methodist Church" lane="E26_0" startPos="57.31" endPos="67.31"/>
-    <busStop id="8141-a4ce3936" name="Fairlands Avenue" lane="E3_0" startPos="41.00" endPos="51.00"/>
-    <busStop id="8143-3123975c" name="Great North Road/Roberton Road" lane="E2_0" startPos="376.30" endPos="386.30"/>
-    <busStop id="8145-8a0f9a34" name="Great North Road/Victor Street" lane="-E1_0" startPos="167.92" endPos="177.92"/>
-    <busStop id="8147-58c872f4" name="Avondale Police Station" lane="-E9_0" startPos="160.32" endPos="170.32"/>
-    <busStop id="8149-2cc6f1a3" name="Stop A Avondale" lane="-E10_0" startPos="107.17" endPos="117.17"/>
-    <busStop id="8151-20dc80d1" name="St Mary School" lane="-E12_0" startPos="103.36" endPos="113.36"/>
+    <busStop id="8101-29d73840" name="Ponsonby Road" lane="8101-29d73840_0" startPos="66.23" endPos="76.23"/>
+    <busStop id="8103-aa6d2901" name="Burns Street" lane="8103-aa6d2901_0" startPos="71.23" endPos="81.23"/>
+    <busStop id="8105-5b355394" name="Sussex Street" lane="8105-5b355394_0" startPos="69.86" endPos="79.86"/>
+    <busStop id="8107-c8de6594" lane="8107-c8de6594_0" startPos="45.90" endPos="55.90"/>
+    <busStop id="8111-90faa379" lane="8111-90faa379_0" startPos="36.91" endPos="46.91"/>
+    <busStop id="8113-669001e8" name="St Joseph Church" lane="8113-669001e8_0" startPos="62.85" endPos="72.85"/>
+    <busStop id="8115-d510785e" name="Great North Road/Grey Lynn Shops" lane="8115-d510785e_0" startPos="91.41" endPos="101.41"/>
+    <busStop id="8117-0671251b" name="Great North Road/Grey Lynn School" lane="8117-0671251b_0" startPos="39.05" endPos="49.05"/>
+    <busStop id="8119-e41c6252" name="Bullock Track" lane="8119-e41c6252_0" startPos="2.57" endPos="12.57"/>
+    <busStop id="8121-2a2cd206" name="Great North Road/MOTAT" lane="8121-2a2cd206_0" startPos="22.83" endPos="32.83"/>
+    <busStop id="8123-af1d2f39" name="Western Springs Park" lane="8123-af1d2f39_0" startPos="31.25" endPos="41.25"/>
+    <busStop id="8125-0b23e96e" name="Auckland Zoo" lane="8125-0b23e96e_0" startPos="5.71" endPos="15.71"/>
+    <busStop id="8127-33d8995c" name="Pasadena Shops" lane="8127-33d8995c_0" startPos="12.52" endPos="22.52"/>
+    <busStop id="8129-39943bed" name="Walmer Road" lane="8129-39943bed_0" startPos="12.64" endPos="22.64"/>
+    <busStop id="8131-3cc7ec8a" name="Great North Road/Pt Chevalier Shops" lane="8131-3cc7ec8a_0" startPos="10.47" endPos="20.47"/>
+    <busStop id="8133-4629fc99" name="Herdman Street" lane="8133-4629fc99_0" startPos="79.52" endPos="89.52"/>
+    <busStop id="8137-924f9275" name="Alford Street" lane="8137-924f9275_0" startPos="57.31" endPos="67.31"/>
+    <busStop id="8139-2a085b0f" name="Waterview Methodist Church" lane="8139-2a085b0f_0" startPos="41.00" endPos="51.00"/>
+    <busStop id="8141-a4ce3936" name="Fairlands Avenue" lane="8141-a4ce3936_0" startPos="376.30" endPos="386.30"/>
+    <busStop id="8143-3123975c" name="Great North Road/Roberton Road" lane="8143-3123975c_0" startPos="70.51" endPos="80.51"/>
+    <busStop id="8145-8a0f9a34" name="Great North Road/Victor Street" lane="8145-8a0f9a34_0" startPos="167.92" endPos="177.92"/>
+    <busStop id="8147-58c872f4" name="Avondale Police Station" lane="8147-58c872f4_0" startPos="160.32" endPos="170.32"/>
+    <busStop id="8149-2cc6f1a3" name="Stop A Avondale" lane="8149-2cc6f1a3_0" startPos="107.17" endPos="117.17"/>
+    <busStop id="8151-20dc80d1" name="St Mary School" lane="8151-20dc80d1_0" startPos="103.36" endPos="113.36"/>
 </additional>

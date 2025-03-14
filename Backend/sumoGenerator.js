@@ -10,7 +10,7 @@ function generateSUMOFiles(busNumber, startStation, destination, stops) {
   // Create SUMO XML structure
   const routeXML = xmlbuilder
     .create("routes")
-    .ele("vType", { id: "bus", accel: "1.0", decel: "1.0", length: "12", maxSpeed: "20" });
+    .ele("vType", { id: "BusType" , vClass:"bus"});
 
   const route = routeXML.ele("route", { id: `route_${busNumber}`, edges: stops.map((s) => s.id).join(" ") });
 
@@ -19,9 +19,9 @@ function generateSUMOFiles(busNumber, startStation, destination, stops) {
   const destinationStop = stops.find((s) => s.attributes.stop_name === destination);
 
   route
-    .ele("vehicle", { id: `bus_${busNumber}`, type: "bus", route: `route_${busNumber}`, depart: "0" })
-    .ele("stop", { busStop: startStop ? startStop.attributes.stop_id : "UNKNOWN", duration: "10" })
-    .ele("stop", { busStop: destinationStop ? destinationStop.attributes.stop_id : "UNKNOWN", duration: "10" });
+    .ele("vehicle", { id: `bus_${busNumber}`, type: "BusType", route: `route_${busNumber}`, depart: "0" })
+    .ele("stop", { busStop: startStop ? startStop.attributes.stop_id : "UNKNOWN", duration: "4" })
+    .ele("stop", { busStop: destinationStop ? destinationStop.attributes.stop_id : "UNKNOWN", duration: "4" });
 
   // Save the XML file
   fs.writeFileSync(routeFile, routeXML.end({ pretty: true }));
