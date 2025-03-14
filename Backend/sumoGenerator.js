@@ -10,18 +10,36 @@ function generateSUMOFiles(busNumber, startStation, destination, stops) {
   // Create SUMO XML structure
   const routeXML = xmlbuilder
     .create("routes")
-    .ele("vType", { id: "BusType" , vClass:"bus"});
+    .att("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance")
+    .att("xsi:noNamespaceSchemaLocation", "http://sumo.dlr.de/xsd/routes_file.xsd");
 
-  const route = routeXML.ele("route", { id: `route_${busNumber}`, edges: stops.map((s) => s.id).join(" ") });
+  // Add VTypes
+  routeXML.ele("vType", { id: "BusType", vClass: "bus" });
+  //routeXML.ele("vType", { id: "DEFAULT_VEHTYPE", vClass: "bus" });
 
-  // Find stop IDs instead of stop names
+  // Create the route element
+  const route = routeXML.ele("route", {
+    id: `route_${busNumber}`,
+    edges: stops.map((s) => s.id).join(" ")
+  });
+
+  // Find start and destination stops
   const startStop = stops.find((s) => s.attributes.stop_name === startStation);
   const destinationStop = stops.find((s) => s.attributes.stop_name === destination);
 
-  route
-    .ele("vehicle", { id: `bus_${busNumber}`, type: "BusType", route: `route_${busNumber}`, depart: "0" })
-    .ele("stop", { busStop: startStop ? startStop.attributes.stop_id : "UNKNOWN", duration: "4" })
-    .ele("stop", { busStop: destinationStop ? destinationStop.attributes.stop_id : "UNKNOWN", duration: "4" });
+  // Create the trip element for the vehicle
+  const trip = routeXML.ele("trip", {
+    id: `bus_${busNumber}`,
+    type: "BusType",
+    depart: "0.00",
+    from: "5914-233d0cdc",
+    to: "7049-24767414",
+    via: stops.map((s) => s.id).join(" ") // Include all the stops for the route
+  });
+
+ // Add stops only at the startStop and destinationStop
+  trip.ele("stop", { busStop: startStop.attributes.stop_id, duration: "5" });
+  trip.ele("stop", { busStop: destinationStop.attributes.stop_id, duration: "5" });
 
   // Save the XML file
   fs.writeFileSync(routeFile, routeXML.end({ pretty: true }));
