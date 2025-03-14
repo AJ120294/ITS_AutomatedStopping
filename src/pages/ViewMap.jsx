@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker} from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useLocation } from "react-router-dom";
@@ -47,12 +47,25 @@ function ViewMap() {
       <Header />
       <h2>Enjoy Your Journey</h2>
 
-      {/* ✅ 이전 페이지에서 받은 정보 표시 */}
-      <div className="info-box">
-        <p><strong>Bus Number:</strong> {busNumber || "N/A"}</p>
-        <p><strong>Start Station:</strong> {startStation || "N/A"}</p>
-        <p><strong>Destination:</strong> {destination || "N/A"}</p>
+      {/* 🚀 버스 정보 UI */}
+      <div className="bus-info">
+        <div className="station left">
+          <p className="station-label">Start Station</p>
+          <p className="station-name">{startStation || "N/A"}</p>
+        </div>
+        
+        {/* 버스 이미지 & 버스 번호 */}
+        <div className="bus-container">
+          <img src="/src/assets/bus-image.png" alt="Bus" className="bus-image" />
+          <div className="bus-number">{busNumber || "N/A"}</div>
+        </div>
+        
+        <div className="station right">
+          <p className="station-label">Destination</p>
+          <p className="station-name">{destination || "N/A"}</p>
+        </div>
       </div>
+
 
       <MapContainer center={busPosition} zoom={15} className="map">
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />

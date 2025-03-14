@@ -10,11 +10,26 @@
   text-align: center;
 }
 
-.map {
-  width: 90%;
-  height: 60vh;
+/*  버스 정보 섹션 */
+.bus-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 15px 0;
+  background: white;
+  padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/*  지도 스타일 */
+.map {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  border-radius: 12px;
+  margin-top: 20px;
 }
 
 /* 정보 박스 스타일 */
@@ -31,6 +46,25 @@
   transition: transform 0.3s ease-in-out; /* 부드러운 효과 */
 }
 
+/*  정류장 스타일 */
+.station {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.station-label {
+  font-size: 16px;
+  color: #555;
+}
+
+.station-name {
+  font-size: 20px;
+  color: #222;
+  font-weight: bold;
+}
+
+
 .info-box:hover {
   transform: scale(1.05); /* 🔥 마우스를 올리면 살짝 확대되는 효과 */
 }
@@ -43,8 +77,48 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* 글자 그림자 */
 }
 
+/*  버스 이미지 스타일 */
+.bus-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bus-image {
+  width: 100px;
+  height: auto;
+}
+
+/* 버스 번호 스타일 */
+.bus-number {
+  position: absolute;
+  top: 12%;
+  left: 81%;
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(8, 7, 7);
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* 반응형 디자인 */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .bus-info {
+    flex-direction: column;
+  }
+  .station {
+    margin: 10px 0;
+  }
+
+  .bus-image {
+    width: 60px;
+  }
+
+  .bus-number {
+    font-size: 16px;
+  }
+
   .info-box {
     max-width: 90%;
     padding: 15px;
@@ -52,5 +126,41 @@
 
   .info-box p {
     font-size: 16px;
+  }
+}
+
+/* 📌 전체 컨테이너 스타일 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #F9F9F9, #E3E3E3);
+  text-align: center;
+}
+
+/* 📌 지도 크기 조정 */
+.map {
+  width: 90%; /* ✅ 너비를 더 크게 확장 */
+  max-width: 800px; /* ✅ 최대 너비 제한 */
+  height: 500px; /* ✅ 기본 크기 증가 */
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* 📌 반응형 조정: 모바일에서 지도 크기를 더 크게 설정 */
+@media (max-width: 768px) {
+  .map {
+    width: 95%; /* ✅ 모바일에서는 너비를 더 크게 조정 */
+    height: 600px; /* ✅ 높이를 더 크게 조정 */
+  }
+}
+
+@media (max-width: 480px) {
+  .map {
+    width: 100%; /* ✅ 작은 화면에서는 전체 너비 사용 */
+    height: 70vh; /* ✅ 화면 높이의 70%를 사용 */
   }
 }
