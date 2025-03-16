@@ -4,6 +4,12 @@
   }
   
   .logo {
-    width: 100px; /* 크기 조정*/
+    width: 191px; /* 크기 조정*/
   }
   
+
+  /* 새로운 로고 스타일 */
+.second-logo {
+  width: 199px; /* 기존 로고와 크기 동일 */
+  height: auto;
+}
