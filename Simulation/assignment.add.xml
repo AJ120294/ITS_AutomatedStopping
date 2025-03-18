@@ -1,39 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-03-14 14:35:52 by Eclipse SUMO netedit Version 1.22.0
+<!-- generated on 2025-03-19 08:51:26 by Eclipse SUMO netedit Version 1.22.0
 -->
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
     <!-- StoppingPlaces -->
     <busStop id="1546-33fd8055" name="Lynnmall - The Brickworks" lane="1546-33fd8055_0" startPos="152.60" endPos="162.60"/>
-    <busStop id="1760-317dbc99" name="Stop A Panmure Station" lane="E9_0" startPos="159.78" endPos="169.78"/>
+    <busStop id="1760-317dbc99" name="Stop A Panmure Station" lane="1760-317dbc99_0" startPos="79.34" endPos="89.34"/>
     <busStop id="1869-5e6c53e2" name="St Jude Street" lane="1869-5e6c53e2_0" startPos="179.83" endPos="189.83"/>
     <busStop id="5779-c6aeef3f" name="Portage Road" lane="5779-c6aeef3f_0" startPos="62.78" endPos="72.78"/>
     <busStop id="5914-233d0cdc" name="Stop E New Lynn" lane="5914-233d0cdc_0" startPos="160.98" endPos="170.98"/>
-    <busStop id="6125-cf3235f8" name="Williams Avenue" lane="E1_0" startPos="165.92" endPos="175.92"/>
-    <busStop id="6127-61b89047" name="Palm Avenue/Pakuranga Plaza" lane="E0_0" startPos="82.74" endPos="92.74"/>
-    <busStop id="6129-28bbc03d" name="Ti Rakau Park" lane="-E2_0" startPos="409.84" endPos="419.84"/>
-    <busStop id="6131-5efac242" name="Marriott Road" lane="-E2_0" startPos="56.74" endPos="66.74"/>
-    <busStop id="6133-76d6b3e0" name="Edgewater Drive" lane="-E3.247_0" startPos="27.43" endPos="37.43"/>
-    <busStop id="6135-e06c5bc7" name="Riverhills Park" lane="-E3_0" startPos="29.42" endPos="39.42"/>
-    <busStop id="6137-efe1e5a5" name="Burswood Drive" lane="-E6_0" startPos="86.95" endPos="96.95"/>
-    <busStop id="6139-f2088f38" name="Harris Road" lane="-E5_0" startPos="43.73" endPos="53.73"/>
-    <busStop id="6141-eb56f749" name="Ti Rakau Drive/Trugood Drive" lane="-E4_0" startPos="17.54" endPos="27.54"/>
-    <busStop id="6231-190b2aaa" name="Stop A Botany Town Centre" lane="-E8_0" startPos="41.92" endPos="51.92"/>
-    <busStop id="6294-9919bdf3" name="Woolworths Botany" lane="-E8_0" startPos="196.66" endPos="206.66"/>
-    <busStop id="6296-473fe125" name="The Hub" lane="-E7_0" startPos="74.76" endPos="84.76"/>
+    <busStop id="6125-cf3235f8" name="Williams Avenue" lane="6125-cf3235f8_0" startPos="82.74" endPos="92.74"/>
+    <busStop id="6127-61b89047" name="Palm Avenue/Pakuranga Plaza" lane="6127-61b89047_0" startPos="56.74" endPos="66.74"/>
+    <busStop id="6129-28bbc03d" name="Ti Rakau Park" lane="6129-28bbc03d_0" startPos="27.43" endPos="37.43"/>
+    <busStop id="6131-5efac242" name="Marriott Road" lane="6131-5efac242_0" startPos="95.51" endPos="105.51"/>
+    <busStop id="6133-76d6b3e0" name="Edgewater Drive" lane="6133-76d6b3e0_0" startPos="29.42" endPos="39.42"/>
+    <busStop id="6135-e06c5bc7" name="Riverhills Park" lane="6135-e06c5bc7_0" startPos="99.64" endPos="109.64"/>
+    <busStop id="6137-efe1e5a5" name="Burswood Drive" lane="6137-efe1e5a5_0" startPos="86.95" endPos="96.95"/>
+    <busStop id="6139-f2088f38" name="Harris Road" lane="6139-f2088f38_0" startPos="43.73" endPos="53.73"/>
+    <busStop id="6141-eb56f749" name="Ti Rakau Drive/Trugood Drive" lane="6141-eb56f749_0" startPos="24.04" endPos="34.04"/>
+    <busStop id="6231-190b2aaa" name="Stop A Botany Town Centre" lane="6231-190b2aaa_0" startPos="41.92" endPos="51.92"/>
+    <busStop id="6294-9919bdf3" name="Woolworths Botany" lane="6294-9919bdf3_0" startPos="74.76" endPos="84.76"/>
+    <busStop id="6296-473fe125" name="The Hub" lane="6296-473fe125_0" startPos="34.20" endPos="44.20"/>
     <busStop id="7049-24767414" name="Vulcan Lane" lane="7049-24767414_0" startPos="29.24" endPos="39.24"/>
     <busStop id="7053-154c6c71" name="Wellesley Street" lane="7053-154c6c71_0" startPos="75.07" endPos="85.07"/>
     <busStop id="7059-607e2a63" name="Auckland Town Hall" lane="7059-607e2a63_0" startPos="43.52" endPos="53.52"/>
     <busStop id="7065-5235e1c6" name="Scotia Place" lane="7065-5235e1c6_0" startPos="70.76" endPos="80.76"/>
     <busStop id="7133-173774ea" name="Pitt Street" lane="7133-173774ea_0" startPos="81.65" endPos="91.65"/>
     <busStop id="7135-b1ba3584" name="Rainbow Bridge/Karangahape Road" lane="7135-b1ba3584_0" startPos="66.15" endPos="76.15"/>
-    <busStop id="7513-e09ddd20" name="Ballarat Street" lane="E15_0" startPos="118.84" endPos="128.84"/>
-    <busStop id="7515-b4111e45" name="Harrison Road" lane="E14_0" startPos="195.74" endPos="205.74"/>
-    <busStop id="7517-d5034761" name="Ellerslie Panmure Highway/Harris Road" lane="7517-d5034761_0" startPos="326.68" endPos="336.68"/>
-    <busStop id="7519-4859f3cb" name="Ellerslie Panmure Highway/Burt Road" lane="E12_0" startPos="116.70" endPos="126.70"/>
-    <busStop id="7521-14bbf05f" name="Barrack Road" lane="E11_0" startPos="261.23" endPos="271.23"/>
-    <busStop id="7523-7abc98c6" name="Mountain Road" lane="E10_0" startPos="178.34" endPos="188.34"/>
+    <busStop id="7141-d8af5868" name="Anzac Avenue/Beach Road" lane="7141-d8af5868_0" startPos="114.14" endPos="124.14"/>
+    <busStop id="7145-caabaedd" name="Waterloo Quadrant" lane="7145-caabaedd_0" startPos="85.75" endPos="95.75"/>
+    <busStop id="7147-4e9003b4" name="Stop E Auckland Universities" lane="7147-4e9003b4_0" startPos="64.56" endPos="74.56"/>
+    <busStop id="7149-6d6d1e99" name="Symonds Street/Karangahape Road" lane="7149-6d6d1e99_0" startPos="104.14" endPos="114.14"/>
+    <busStop id="7177-4660a5ff" name="Melrose Street" lane="7177-4660a5ff_0" startPos="57.97" endPos="67.97"/>
+    <busStop id="7201-b3efdf9d" name="Khyber Pass Road" lane="7201-b3efdf9d_0" startPos="109.31" endPos="119.31"/>
+    <busStop id="7203-52127399" name="Stop A Westfield Newmarket" lane="7203-52127399_0" startPos="103.91" endPos="113.91"/>
+    <busStop id="7205-e1b07628" name="Clovernook Road" lane="7205-e1b07628_0" startPos="68.09" endPos="78.09"/>
+    <busStop id="7207-bfc319e4" name="St Marks Road" lane="7207-bfc319e4_0" startPos="111.58" endPos="121.58"/>
+    <busStop id="7227-3ccd581c" name="Park Road/Auckland City Hospital" lane="7227-3ccd581c_0" startPos="126.47" endPos="136.47"/>
+    <busStop id="7231-d0b82ab5" name="Grafton Station" lane="7231-d0b82ab5_0" startPos="83.22" endPos="93.22"/>
+    <busStop id="7501-d6dd7a1b" lane="7501-d6dd7a1b_0" startPos="173.35" endPos="183.35"/>
+    <busStop id="7503-832c53ad" name="Kalmia Street" lane="7503-832c53ad_0" startPos="118.66" endPos="128.66"/>
+    <busStop id="7505-04bee04b" name="Stop A Ellerslie" lane="7505-04bee04b_0" startPos="22.58" endPos="32.58"/>
+    <busStop id="7509-6b201da2" name="Ellerslie Domain" lane="7509-6b201da2_0" startPos="53.82" endPos="63.82"/>
+    <busStop id="7511-c8760fea" name="Ellerslie Park Road" lane="7511-c8760fea_0" startPos="40.73" endPos="50.73"/>
+    <busStop id="7513-e09ddd20" name="Ballarat Street" lane="7513-e09ddd20_0" startPos="71.09" endPos="81.09"/>
+    <busStop id="7515-b4111e45" name="Harrison Road" lane="7515-b4111e45_0" startPos="49.51" endPos="59.51"/>
+    <busStop id="7517-d5034761" name="Ellerslie Panmure Highway/Harris Road" lane="E27_0" startPos="62.45" endPos="72.45"/>
+    <busStop id="7519-4859f3cb" name="Ellerslie Panmure Highway/Burt Road" lane="7519-4859f3cb_0" startPos="32.26" endPos="42.26"/>
+    <busStop id="7521-14bbf05f" name="Barrack Road" lane="7521-14bbf05f_0" startPos="79.40" endPos="89.40"/>
+    <busStop id="7523-7abc98c6" name="Mountain Road" lane="7523-7abc98c6_0" startPos="69.09" endPos="79.09"/>
+    <busStop id="7601-17be9b9f" name="Ngaire Avenue" lane="7601-17be9b9f_0" startPos="92.47" endPos="102.47"/>
+    <busStop id="7605-01c4b26f" name="Great South Road/Market Road" lane="7605-01c4b26f_0" startPos="77.50" endPos="87.50"/>
+    <busStop id="7607-e365ff93" name="Karetu Road" lane="7607-e365ff93_0" startPos="58.96" endPos="68.96"/>
+    <busStop id="7611-b02f5fd0" name="Momona Road" lane="7611-b02f5fd0_0" startPos="59.28" endPos="69.28"/>
+    <busStop id="7613-befee71d" name="Woolworths Greenlane" lane="7613-befee71d_0" startPos="84.95" endPos="94.95"/>
+    <busStop id="7615-0b0212c3" name="Matai Road" lane="7615-0b0212c3_0" startPos="113.14" endPos="123.14"/>
     <busStop id="8101-29d73840" name="Ponsonby Road" lane="8101-29d73840_0" startPos="66.23" endPos="76.23"/>
     <busStop id="8103-aa6d2901" name="Burns Street" lane="8103-aa6d2901_0" startPos="71.23" endPos="81.23"/>
     <busStop id="8105-5b355394" name="Sussex Street" lane="8105-5b355394_0" startPos="69.86" endPos="79.86"/>
@@ -58,4 +80,6 @@
     <busStop id="8147-58c872f4" name="Avondale Police Station" lane="8147-58c872f4_0" startPos="160.32" endPos="170.32"/>
     <busStop id="8149-2cc6f1a3" name="Stop A Avondale" lane="8149-2cc6f1a3_0" startPos="107.17" endPos="117.17"/>
     <busStop id="8151-20dc80d1" name="St Mary School" lane="8151-20dc80d1_0" startPos="103.36" endPos="113.36"/>
+    <busStop id="8480-db304e65" name="Dilworth School" lane="8480-db304e65_0" startPos="97.64" endPos="107.64"/>
+    <busStop id="bs_16" name="Britomart Commerce Street" lane="7020-65f1fc06_0" startPos="118.47" endPos="128.47"/>
 </additional>
