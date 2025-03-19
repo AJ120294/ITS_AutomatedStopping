@@ -1,24 +1,7 @@
-/*
-export const fetchStations = async () => {
-    // once API provided, add URL here, it is dummy data now, (나중에 팀원이 API를 제공하면 여기에 실제 URL 넣기)
-    const response = await fetch("https://api.example.com/stations");
-    const data = await response.json();
-    return data;
-  };
-  
-
-  export const fetchBusLocation = async (busId) => {
-    // call Bus GPS(버스 GPS 데이터 가져오기)
-    const response = await fetch(`https://api.example.com/bus/${busId}/location`);
-    const data = await response.json();
-    return data;
-  };
-*/
-
-// api.js
 import axios from 'axios';
 
 const SUBSCRIPTION_KEY = '8666f374a7bb4b6dbd95f0145a08495f';
+const BACKEND_URL = 'http://localhost:5000'; // ✅ Change if backend is hosted elsewhere
 
 // Fetch Route ID by Bus Number
 async function fetchRouteId(busNumber) {
@@ -83,4 +66,20 @@ async function fetchStopsForBus(busNumber) {
   return await fetchStops(tripId);
 }
 
-export { fetchRouteId, fetchTripId, fetchStops, fetchStopsForBus };
+// ✅ NEW FUNCTION: Generate SUMO Files via Backend
+async function generateSUMOFiles(busNumber, startStation, destination) {
+  try {
+    const response = await axios.post(`${BACKEND_URL}/api/generate-sumo`, {
+      busNumber,
+      startStation,
+      destination
+    });
+
+    return response.data; // Returns { message: "SUMO files generated successfully!" }
+  } catch (error) {
+    console.error('Error generating SUMO files:', error.message);
+    return { error: "Failed to generate SUMO files." };
+  }
+}
+
+export { fetchRouteId, fetchTripId, fetchStops, fetchStopsForBus, generateSUMOFiles };
