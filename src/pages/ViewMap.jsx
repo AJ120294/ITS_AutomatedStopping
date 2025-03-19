@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup, Polyline } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, Polyline, CircleMarker } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useLocation } from "react-router-dom";
@@ -81,21 +81,25 @@ function ViewMap() {
       <MapContainer center={mapCenter} zoom={14} className="map">
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-        {/*  Add bus stop markers & popups */}
-        {routeStops.map((stop, index) => (
-          <Marker 
-          key={index} 
-          position={[stop.lat, stop.lng]} 
-          icon={stopIcon}
-          className="bus-stop-marker">
-            <Popup>{stop.name}</Popup> {/* Show bus stop name when clicked */}
-            </Marker>
-        ))}
-
-        {/*  Display route line */}
+        {/*  Display route line */ /* change drawing order (19/03/2025 Goun Han) */}
         {routeStops.length > 1 && (
           <Polyline positions={routeStops.map(stop => [stop.lat, stop.lng])} color="blue" weight={4} />
         )}
+
+        {/*  Add bus stop markers & popups */ /* change stop icon (19/03/2025 Goun Han) */}
+        {routeStops.map((stop, index) => (
+          <CircleMarker
+            key={index}
+            center={[stop.lat, stop.lng]}
+            radius={5}
+            color="blue"  // 테두리 색
+            fillColor="white"  // 내부 색
+            fillOpacity={1}
+          >
+            <Popup>{stop.name}</Popup>
+          </CircleMarker>
+        ))}
+        
       </MapContainer>
     </div>
   );

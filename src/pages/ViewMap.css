@@ -7,12 +7,13 @@
   padding: 20px 20px 0; /* Reduce top padding, allow bottom expansion */
   background: linear-gradient(135deg, #F9F9F9, #E3E3E3);
   text-align: center;
+  padding: 20px 20px 40px; /* Expand bottom padding (19/03/2025 Goun Han) */
 }
 
 /* ✅ Map Styling (Square Shape) */
 .map {
   width: 90vw; /* Make width responsive */
-  height: 90vw; /* Match height to width to make it a square */
+  height: 80vh; /* Match height to width to make it a square */ /* 90vw -> 80vh (19/03/2025 Goun Han) */
   max-width: 600px; /* Prevent it from being too large on desktops */
   max-height: 600px; /* Keep a square ratio */
   border-radius: 12px;
