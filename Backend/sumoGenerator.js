@@ -65,12 +65,12 @@ function generateSUMOFiles(busNumber, startStation, destination, stops) {
       }
 
       if (!existingStops.includes(startStop.attributes.stop_id)) {
-        tripXML = tripXML.replace('</trip>', `    <stop busStop="${startStop.attributes.stop_id}" duration="5"/>\n  </trip>`);
+        tripXML = tripXML.replace('</trip>', `   <stop busStop="${startStop.attributes.stop_id}" duration="5"/>\n  </trip>`);
         changesMade = true;
       }
 
       if (!existingStops.includes(destinationStop.attributes.stop_id)) {
-        tripXML = tripXML.replace('</trip>', `    <stop busStop="${destinationStop.attributes.stop_id}" duration="5"/>\n  </trip>`);
+        tripXML = tripXML.replace('</trip>', `   <stop busStop="${destinationStop.attributes.stop_id}" duration="5"/>\n  </trip>`);
         changesMade = true;
       }
 
