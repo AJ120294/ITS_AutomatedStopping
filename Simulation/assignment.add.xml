@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-03-19 08:51:26 by Eclipse SUMO netedit Version 1.22.0
+<!-- generated on 2025-03-19 22:49:50 by Eclipse SUMO netedit Version 1.22.0
 -->
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
@@ -46,7 +46,7 @@
     <busStop id="7511-c8760fea" name="Ellerslie Park Road" lane="7511-c8760fea_0" startPos="40.73" endPos="50.73"/>
     <busStop id="7513-e09ddd20" name="Ballarat Street" lane="7513-e09ddd20_0" startPos="71.09" endPos="81.09"/>
     <busStop id="7515-b4111e45" name="Harrison Road" lane="7515-b4111e45_0" startPos="49.51" endPos="59.51"/>
-    <busStop id="7517-d5034761" name="Ellerslie Panmure Highway/Harris Road" lane="E27_0" startPos="62.45" endPos="72.45"/>
+    <busStop id="7517-d5034761" name="Ellerslie Panmure Highway/Harris Road" lane="7517-d5034761_0" startPos="62.45" endPos="72.45"/>
     <busStop id="7519-4859f3cb" name="Ellerslie Panmure Highway/Burt Road" lane="7519-4859f3cb_0" startPos="32.26" endPos="42.26"/>
     <busStop id="7521-14bbf05f" name="Barrack Road" lane="7521-14bbf05f_0" startPos="79.40" endPos="89.40"/>
     <busStop id="7523-7abc98c6" name="Mountain Road" lane="7523-7abc98c6_0" startPos="69.09" endPos="79.09"/>

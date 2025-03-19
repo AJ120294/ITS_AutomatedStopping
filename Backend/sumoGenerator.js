@@ -16,6 +16,9 @@ function generateSUMOFiles(busNumber, startStation, destination, stops) {
     return;
   }
 
+  // Prepare the stop IDs for the 'via' attribute
+  const busVia = stops.map((s) => s.id).join(" ");
+
   fs.readFile(routeFile, 'utf8', (err, data) => {
     if (err) {
       console.error('Error reading file:', err);
@@ -33,36 +36,24 @@ function generateSUMOFiles(busNumber, startStation, destination, stops) {
     // Check if the <trip> for the bus already exists (Check if busNumber exists in trip ID)
     if (!data.includes(`<trip id="bus_${busNumber}"`)) {
       console.log(`Adding new trip for bus ${busNumber}`);
+      
+      // Find the start and destination stop IDs from the stops array
+      const startStop = stops.find((s) => s.attributes.stop_name === startStation);
+      const destinationStop = stops.find((s) => s.attributes.stop_name === destination);
+
+      if (!startStop || !destinationStop) {
+        console.error('Error: Could not find stop ID for start or destination stop.');
+        return;
+      }
+
       const newTrip = `
-  <trip id="bus_${busNumber}" type="BusType" depart="0.00" from="${busFrom}" to="${busTo}" via="">
-    <stop busStop="${startStation}" duration="5"/>
+  <trip id="bus_${busNumber}" type="BusType" depart="0.00" from="${busFrom}" to="${busTo}" via="${busVia}">
+    <stop busStop="${startStop.attributes.stop_id}" duration="5"/>
+    <stop busStop="${destinationStop.attributes.stop_id}" duration="5"/>
   </trip>`;
+      
       const tripIndex = data.indexOf('</routes>');
       data = data.slice(0, tripIndex) + newTrip + data.slice(tripIndex);
-    }
-
-    // Add stops to the trip for the specific bus number
-    const tripRegex = new RegExp(`<trip id="bus_${busNumber}"[^>]*>`, 'g');
-    let match;
-    while ((match = tripRegex.exec(data)) !== null) {
-      const tripStartIndex = match.index;
-      const tripEndIndex = data.indexOf('</trip>', tripStartIndex) + 7;
-      let tripXML = data.slice(tripStartIndex, tripEndIndex);
-
-      // Add stops if they are not already present
-      stops.forEach(stop => {
-        // Access the stop_id from the stop object
-        const stopId = stop.attributes.stop_id;
-
-        // Prevent adding the stop if it's already present
-        if (!tripXML.includes(`<stop busStop="${stopId}"`)) {
-          const newStop = `    <stop busStop="${stopId}" duration="5"/>`;
-          tripXML = tripXML.replace('</trip>', `${newStop}\n  </trip>`);
-        }
-      });
-
-      // Replace the original trip XML with the updated one
-      data = data.slice(0, tripStartIndex) + tripXML + data.slice(tripEndIndex);
     }
 
     // Write the modified XML back to the file
