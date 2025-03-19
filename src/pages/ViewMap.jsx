@@ -56,7 +56,7 @@ function ViewMap() {
   return (
     <div className="container">
       <Header />
-      <h2>Enjoy Your Journey</h2>
+      <h2>Hop on, Sit Back - The Bus Knows Where to Stop!</h2>
 
       {/*  Bus information UI */}
       <div className="bus-info">
