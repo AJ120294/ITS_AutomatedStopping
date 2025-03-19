@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 function generateSUMOFiles(busNumber, startStation, destination, stops) {
-  const routeFile = './assignment.rou.xml';
+  const routeFile = '../Simulation/assignment.rou.xml';
 
   // Determine the 'from' and 'to' based on the bus number
   let busFrom, busTo;
