@@ -19,6 +19,15 @@ function generateSUMOFiles(busNumber, startStation, destination, stops) {
   // Prepare the stop IDs for the 'via' attribute
   const busVia = stops.map((s) => s.id).join(" ");
 
+  // Find the start and destination stop IDs (Moved these outside so they're always available)
+  const startStop = stops.find((s) => s.attributes.stop_name === startStation);
+  const destinationStop = stops.find((s) => s.attributes.stop_name === destination);
+
+  if (!startStop || !destinationStop) {
+    console.error('🚨 Error: Could not find stop ID for start or destination stop.');
+    return;
+  }
+
   fs.readFile(routeFile, 'utf8', (err, data) => {
     if (err) {
       console.error('Error reading file:', err);
@@ -41,20 +50,11 @@ function generateSUMOFiles(busNumber, startStation, destination, stops) {
     let match = tripRegex.exec(data);
     if (match) {
       console.log(`Found existing trip for bus ${busNumber}`);
-      
+
       // If the trip exists, get the XML of the trip
       const tripStartIndex = match.index;
       const tripEndIndex = data.indexOf('</trip>', tripStartIndex) + 7;
       let tripXML = data.slice(tripStartIndex, tripEndIndex);
-
-      // Find the start and destination stop IDs
-      const startStop = stops.find((s) => s.attributes.stop_name === startStation);
-      const destinationStop = stops.find((s) => s.attributes.stop_name === destination);
-
-      if (!startStop || !destinationStop) {
-        console.error('Error: Could not find stop ID for start or destination stop.');
-        return;
-      }
 
       // Add the new stops to the trip if they are not already there
       const stopRegex = /<stop busStop="([^"]+)"/g;
@@ -64,7 +64,6 @@ function generateSUMOFiles(busNumber, startStation, destination, stops) {
         existingStops.push(stopMatch[1]);
       }
 
-      // Add the start and destination stops if not already included
       if (!existingStops.includes(startStop.attributes.stop_id)) {
         tripXML = tripXML.replace('</trip>', `    <stop busStop="${startStop.attributes.stop_id}" duration="5"/>\n  </trip>`);
         changesMade = true;
@@ -79,8 +78,8 @@ function generateSUMOFiles(busNumber, startStation, destination, stops) {
       data = data.slice(0, tripStartIndex) + tripXML + data.slice(tripEndIndex);
     } else {
       console.log(`Adding new trip for bus ${busNumber}`);
-      
-      // If the trip doesn't exist, create a new one with the specified start and destination stops
+
+      // If the trip doesn't exist, create a new one
       const newTrip = `
   <trip id="bus_${busNumber}" type="BusType" depart="0.00" from="${busFrom}" to="${busTo}" via="${busVia}">
     <stop busStop="${startStop.attributes.stop_id}" duration="5"/>
@@ -98,7 +97,7 @@ function generateSUMOFiles(busNumber, startStation, destination, stops) {
         if (err) {
           console.error('Error writing file:', err);
         } else {
-          console.log('SUMO files updated successfully.');
+          console.log('✅ SUMO files updated successfully.');
         }
       });
     } else {
